@@ -1,3 +1,5 @@
+import { ContactUsComponent } from './contact-us/contact-us.component';
+
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './cart/cart.component';
@@ -12,11 +14,13 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'product-details', component: ProductDetailsComponent },
+  {path:'Contactus', component: ContactUsComponent },
   {path:'Aboutus',component: AboutUsComponent } ,
   { path: 'cart', component: CartComponent },
   { path: 'orders', component: OrderComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
+
   
 ];
 

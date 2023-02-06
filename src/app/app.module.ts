@@ -24,6 +24,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { vendorLoginComponent } from './vendorlogin/vendorlogin.component';
 import { VendorregisterComponent } from './vendorregister/vendorregister.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     LoginComponent,
     vendorLoginComponent,
     VendorregisterComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ContactUsComponent
   ],
   imports:[
     BrowserModule,
