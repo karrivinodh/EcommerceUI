@@ -60,7 +60,7 @@ body {
     background-color: #555;
   }
   
-  @media screen and (max-width: 650px) {
+ /* @media screen and (max-width: 650px) {
     .column {
       width: 100%;
       display: block;
@@ -74,4 +74,164 @@ body {
   }
   .lop{
     text-align: center;
+  }*/
+
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans",sans-serif;
+    box-sizing: border-box;
+}
+
+/* body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+} */
+
+.about-section{
+    background: url(src\assets\Images\AboutUs\ecom1.jpg) no-repeat right;
+    background-size: 70%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.inner-container{
+    width: 55%;
+    float: left;
+    /* background-color: #fcf8eb; */
+    background-color: rgb(253, 182, 61);
+    padding: 100px;
+}
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+p {
+    font-size: 15px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .about-section{
+        padding: 0;
+    }
+    .inner-container{
+        padding: 60px;
+    }
+}
+
+.vision {
+    background: url(src\assets\Images\AboutUs\v4.jpg) no-repeat left;
+    background-size: 65%;
+    background-color: #ffffff;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+#vision-text {
+    width: 55%;
+    float: right;
+    /* background-color: #fdfdfd; */
+    /* background-color: rgb(237, 251, 251); */
+    background-color: rgb(49, 176, 255);
+    padding: 50px;
+    /* box-shadow: 0, 0, 10px rgba(0, 0, 0, 0.1); */
+}
+
+.vision h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.team-section {
+    margin-top: 50px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px;
+    font-size: 30px;
+    background: url(src\assets\Images\AboutUs\t4.jpg) no-repeat center;
+    background-size: 100%;
   }
+
+  .team-member {
+    display: inline-block;
+    width: 300px;
+    text-align: left;
+    margin: 0 50px 50px 0;
+    padding: 20px;
+    background-color: #f2f2f2;
+    /* background: url(t4.jfif) no-repeat center; */
+    border-radius: 10px;
+  }
+
+  .team-member h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .team-section h1 {
+    margin-bottom: 30px;
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0, 0, 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+  }
+  .button:hover, .button:focus, button:active {
+    box-shadow: 0, 0, 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
