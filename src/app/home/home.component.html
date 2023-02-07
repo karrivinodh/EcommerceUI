@@ -2,7 +2,8 @@
 
     <div class="mb-4 my-shadow my-rounded-corner overflow-hidden" *ngFor="let suggestedProduct of suggestedProducts">
         <div class="product-baner position-relative">
-            <button type="button" class="btn btn-outline-light btn-lg">Shop Now</button>
+            <button type="button" class="btn btn-outline-light btn-lg" onclick="window.location.href='http://localhost:4200/products?category=electronics&subcategory=mobiles'"
+            >Shop Now</button>
 
             <img src="../../assets/Images/{{suggestedProduct.banerimage}}" class="w-100" alt="Baner Image">
         </div>

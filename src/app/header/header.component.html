@@ -36,7 +36,7 @@
                     <li><button type="button" id="lop" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#generalmodal"
                         (click)="openModal('login')" *ngIf="!utilityService.isLoggedIn()">Customer</button></li>
                         <li><button type="button"  id="lop" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#generalmodal"
-                            (click)="openModal('login')" *ngIf="!utilityService.isLoggedIn()">Vendor</button></li>
+                            (click)="openVendorModal('vendorlogin')" *ngIf="!utilityService.isLoggedIn()">Vendor</button></li>
                         
                 </ul>
             </div>
@@ -48,7 +48,7 @@
                     <li><button type="button" id="lop" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#generalmodal"
                     (click)="openModal('register')" *ngIf="!utilityService.isLoggedIn()">Customer</button></li>
                         <li> <button type="button" id="lop" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#generalmodal"
-                            (click)="openModal('register')" *ngIf="!utilityService.isLoggedIn()">Vendor</button></li>
+                            (click)="openVendorModal('vendorregister')" *ngIf="!utilityService.isLoggedIn()">Vendor</button></li>
                 </ul>
             </div>
             <button type="button" class="btn btn-outline-light" routerLink="/Aboutus">About Us</button>

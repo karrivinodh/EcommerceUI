@@ -11,6 +11,8 @@ import { Category, NavigationItem } from '../models/models';
 import { RegisterComponent } from '../register/register.component';
 import { NavigationService } from '../services/navigation.service';
 import { UtilityService } from '../services/utility.service';
+import { vendorLoginComponent } from '../vendorlogin/vendorlogin.component';
+import { VendorregisterComponent } from '../vendorregister/vendorregister.component';
 
 
 @Component({
@@ -75,6 +77,22 @@ export class HeaderComponent implements OnInit {
     }
     if (name === 'register') {
       componentType = RegisterComponent;
+      this.modalTitle.nativeElement.textContent = 'Enter Register Information';
+    }
+
+    this.container.createComponent(componentType);
+  }
+
+  openVendorModal(name: string) {
+    this.container.clear();
+
+    let componentType!: Type<any>;
+    if (name === 'vendorlogin') {
+      componentType = vendorLoginComponent;
+      this.modalTitle.nativeElement.textContent = 'Enter Login Information';
+    }
+    if (name === 'vendorregister') {
+      componentType =VendorregisterComponent;
       this.modalTitle.nativeElement.textContent = 'Enter Register Information';
     }
 

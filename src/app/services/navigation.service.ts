@@ -63,6 +63,18 @@ export class NavigationService {
       { responseType: 'text' }
     );
   }
+  registerVendor(user: User) {
+    let url = this.baseurl+'RegisterVendor';
+    return this.http.post(url, user, { responseType: 'text' });
+  }
+  loginVendor(email: string, password: string) {
+    let url = this.baseurl + 'LoginVendor';
+    return this.http.post(
+      url,
+      { Email: email, Password: password },
+      { responseType: 'text' }
+    );
+  }
 
   submitReview(userid: number, productid: number, review: string) {
     let obj: any = {

@@ -17,7 +17,8 @@ export class UtilityService {
 
   applyDiscount(price: number, discount: number): number {
     let finalPrice: number = price - price * (discount / 100);
-    return finalPrice;
+    return parseFloat(finalPrice.toFixed(2));
+   
   }
 
   // JWT Helper Service : npm install @auth0/angular-jwt
