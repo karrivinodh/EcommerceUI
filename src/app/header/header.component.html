@@ -55,7 +55,9 @@
             <button type="button" class="btn btn-outline-light" routerLink="/Contactus">Contact Us</button>
             
            
-            <button type="button" class="btn btn-outline-light" *ngIf="utilityService.isLoggedIn()">Account</button>
+            <!--<button type="button" class="btn btn-outline-light" *ngIf="utilityService.isLoggedIn()">Account</button>-->
+             
+            <!--<button type="button" class="btn btn-outline-light" *ngIf="utilityService.isVendorLoggedIn()">Account</button>-->
             <button type="button" class="btn btn-outline-light" routerLink="/cart"
                     *ngIf="utilityService.isLoggedIn()">
                     Cart
@@ -65,6 +67,8 @@
                     *ngIf="utilityService.isLoggedIn()">Orders</button>
             <button type="button" class="btn btn-outline-light" (click)="utilityService.logoutUser()"
                     *ngIf="utilityService.isLoggedIn()">Logout</button>
+                    <!--<button type="button" class="btn btn-outline-light" (click)="utilityService.logoutUser()"
+                    *ngIf="utilityService.isVendorLoggedIn()">Logout</button>-->
         </div>
     </div>
 </header>

@@ -4,6 +4,7 @@ import { Product } from '../models/models';
 import { NavigationService } from '../services/navigation.service';
 import { UtilityService } from '../services/utility.service';
 
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',

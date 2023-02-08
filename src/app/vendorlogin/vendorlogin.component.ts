@@ -12,7 +12,7 @@ import { BrowserModule } from '@angular/platform-browser';
   styleUrls: ['./vendorlogin.component.css']
 })
 export class vendorLoginComponent implements OnInit {
-  loginForm!: FormGroup;
+  vendorloginForm!: FormGroup;
   message = '';
   constructor(
     private fb: FormBuilder,
@@ -21,7 +21,7 @@ export class vendorLoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.loginForm = this.fb.group({
+    this.vendorloginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       pwd: [
         '',
@@ -34,14 +34,14 @@ export class vendorLoginComponent implements OnInit {
     });
   }
 
-  login() {
+  loginvendor() {
     this.navigationService
-      .loginUser(this.Email.value, this.PWD.value)
+      .loginVendor(this.Email.value, this.PWD.value)
       .subscribe((res: any) => {
         if (res.toString() !== 'invalid') {
           this.message = 'Logged In Successfully.';
-          this.utilityService.setUser(res.toString());
-          console.log(this.utilityService.getUser());
+          this.utilityService.setVendor(res.toString());
+          console.log(this.utilityService.getVendor());
         } else {
           this.message = 'Invalid Credentials!';
         }
@@ -49,9 +49,9 @@ export class vendorLoginComponent implements OnInit {
   }
 
   get Email(): FormControl {
-    return this.loginForm.get('email') as FormControl;
+    return this.vendorloginForm.get('email') as FormControl;
   }
   get PWD(): FormControl {
-    return this.loginForm.get('pwd') as FormControl;
+    return this.vendorloginForm.get('pwd') as FormControl;
   }
 }

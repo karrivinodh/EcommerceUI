@@ -60,6 +60,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
         tokenGetter: () => {
           return localStorage.getItem('user');
         },
+       
+      
         allowedDomains: ['localhost:7149'],
       },
     }),

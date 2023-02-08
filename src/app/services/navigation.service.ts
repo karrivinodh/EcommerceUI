@@ -7,6 +7,7 @@ import {
   Payment,
   PaymentMethod,
   User,
+  Vendor,
 } from '../models/models';
 
 @Injectable({
@@ -63,16 +64,16 @@ export class NavigationService {
       { responseType: 'text' }
     );
   }
-  registerVendor(user: User) {
+  registerVendor(vendor:Vendor) {
     let url = this.baseurl+'RegisterVendor';
-    return this.http.post(url, user, { responseType: 'text' });
+    return this.http.post(url,vendor, { responseType: 'text' });
   }
   loginVendor(email: string, password: string) {
     let url = this.baseurl + 'LoginVendor';
     return this.http.post(
       url,
       { Email: email, Password: password },
-      { responseType: 'text' }
+      { responseType: 'text'}
     );
   }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { User } from '../models/models';
+import { User, Vendor } from '../models/models';
 import { NavigationService } from '../services/navigation.service';
 
 @Component({
@@ -51,8 +51,8 @@ export class VendorregisterComponent implements OnInit {
     });
   }
 
-  register() {
-    let user: User = {
+  registervendor() {
+    let vendor: Vendor = {
       id: 0,
       firstName: this.FirstName.value,
       lastName: this.LastName.value,
@@ -64,7 +64,7 @@ export class VendorregisterComponent implements OnInit {
       modifiedAt: '',
     };
 
-    this.navigationService.registerUser(user).subscribe((res: any) => {
+    this.navigationService.registerVendor(vendor).subscribe((res: any) => {
       this.message = res.toString();
     });
   }

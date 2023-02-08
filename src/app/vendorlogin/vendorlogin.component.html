@@ -1,4 +1,4 @@
-<form [formGroup]="loginForm" (ngSubmit)="login()">
+<form [formGroup]="vendorloginForm" (ngSubmit)="loginvendor()">
 
     <!-- Email -->
 <p>vendor</p>
@@ -28,7 +28,7 @@
 
     <!-- Login Button -->
     <div>
-        <button type="submit" [disabled]="loginForm.invalid" class="d-block mx-auto btn btn-outline-primary">
+        <button type="submit" [disabled]="vendorloginForm.invalid" class="d-block mx-auto btn btn-outline-primary">
             Login
         </button>
     </div>
