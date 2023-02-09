@@ -25,6 +25,8 @@ import { vendorLoginComponent } from './vendorlogin/vendorlogin.component';
 import { VendorregisterComponent } from './vendorregister/vendorregister.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AccountComponent } from './account/account.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     vendorLoginComponent,
     VendorregisterComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    AccountComponent,
+    ForgotPasswordComponent
   ],
   imports:[
     BrowserModule,
@@ -60,8 +64,14 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
         tokenGetter: () => {
           return localStorage.getItem('user');
         },
-       
-      
+        allowedDomains: ['localhost:7149'],
+      },
+    }),
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: () => {
+          return localStorage.getItem('vendor');
+        },
         allowedDomains: ['localhost:7149'],
       },
     }),

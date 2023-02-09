@@ -36,7 +36,7 @@
                     <li><button type="button" id="lop" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#generalmodal"
                         (click)="openModal('login')" *ngIf="!utilityService.isLoggedIn()">Customer</button></li>
                         <li><button type="button"  id="lop" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#generalmodal"
-                            (click)="openVendorModal('vendorlogin')" *ngIf="!utilityService.isLoggedIn()">Vendor</button></li>
+                            (click)="openVendorModal('vendorlogin')" *ngIf="!utilityService.isVendorLoggedIn()">Vendor</button></li>
                         
                 </ul>
             </div>
@@ -57,7 +57,7 @@
            
             <!--<button type="button" class="btn btn-outline-light" *ngIf="utilityService.isLoggedIn()">Account</button>-->
              
-            <!--<button type="button" class="btn btn-outline-light" *ngIf="utilityService.isVendorLoggedIn()">Account</button>-->
+            <button type="button" class="btn btn-outline-light" *ngIf="utilityService.isVendorLoggedIn()" routerLink="/account">Account</button>
             <button type="button" class="btn btn-outline-light" routerLink="/cart"
                     *ngIf="utilityService.isLoggedIn()">
                     Cart
@@ -67,8 +67,8 @@
                     *ngIf="utilityService.isLoggedIn()">Orders</button>
             <button type="button" class="btn btn-outline-light" (click)="utilityService.logoutUser()"
                     *ngIf="utilityService.isLoggedIn()">Logout</button>
-                    <!--<button type="button" class="btn btn-outline-light" (click)="utilityService.logoutUser()"
-                    *ngIf="utilityService.isVendorLoggedIn()">Logout</button>-->
+                    <button type="button" class="btn btn-outline-light" (click)="utilityService.logoutVendor()"
+                    *ngIf="utilityService.isVendorLoggedIn()">Logout</button>
         </div>
     </div>
 </header>

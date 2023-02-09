@@ -16,9 +16,6 @@ import {
 export class NavigationService {
  baseurl = 'https://localhost:7149/api/Shopping/'
 
-
- 
-
   constructor(private http: HttpClient) {}
 
   getCategoryList() {
@@ -52,7 +49,7 @@ export class NavigationService {
   }
 
   registerUser(user: User) {
-    let url = this.baseurl+'registerUser';
+    let url = this.baseurl+'RegisterUser';
     return this.http.post(url, user, { responseType: 'text' });
   }
 
@@ -74,6 +71,15 @@ export class NavigationService {
       url,
       { Email: email, Password: password },
       { responseType: 'text'}
+    );
+  }
+
+  forgotPassword(email: string, password: string) {
+    let url = this.baseurl + 'forgotpassword';
+    return this.http.post(
+      url,
+      { Email: email, Password: password },
+      { responseType: 'text' }
     );
   }
 

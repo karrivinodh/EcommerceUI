@@ -9,6 +9,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductsComponent } from './products/products.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { AccountComponent } from './account/account.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { Route } from '@angular/router';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -16,7 +18,9 @@ const routes: Routes = [
   { path: 'product-details', component: ProductDetailsComponent },
   {path:'Contactus', component: ContactUsComponent },
   {path:'Aboutus',component: AboutUsComponent } ,
+  {path:'account', component: AccountComponent },
   { path: 'cart', component: CartComponent },
+  {path:'forgot', component: ForgotPasswordComponent},
   { path: 'orders', component: OrderComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },

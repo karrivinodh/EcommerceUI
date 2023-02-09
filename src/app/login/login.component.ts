@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Type, ViewChild, ViewContainerRef } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { NavigationService } from '../services/navigation.service';
 import { UtilityService } from '../services/utility.service';
+import { ForgotPasswordComponent } from '../forgot-password/forgot-password.component';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +15,8 @@ import { UtilityService } from '../services/utility.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+ 
+  container!: ViewContainerRef;
   loginForm!: FormGroup;
   message = '';
   constructor(
@@ -56,4 +59,7 @@ export class LoginComponent implements OnInit {
   get PWD(): FormControl {
     return this.loginForm.get('pwd') as FormControl;
   }
+
+ 
 }
+

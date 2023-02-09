@@ -1,0 +1,9 @@
+tr,th{
+    text-align: center;
+}
+div { 
+    background: url(src/assets/Images/AboutUs/plaingrey.jpg) repeat;
+    min-height: 200%;
+    background-size: cover;
+        background-position: center;
+}
